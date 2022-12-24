@@ -1,0 +1,28 @@
+@import 'public/fonts/fonts';
+@import './form';
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main: #4e74f5;
+  --black: #000000;
+  --t-black10: #e6e6e6;
+  --t-black40: #999999;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  border: 0;
+  background: unset;
+}
+
+.container {
+  padding: 0 54px;
+}
