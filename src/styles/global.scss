@@ -9,6 +9,8 @@ body {
 
   --main: #4e74f5;
   --black: #000000;
+  --red: #f90043;
+  --error: #fb2424;
   --t-black10: #e6e6e6;
   --t-black40: #999999;
 }
@@ -25,4 +27,13 @@ button {
 
 .container {
   padding: 0 54px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.welcome {
+  margin: auto;
+  font-size: 24px;
 }

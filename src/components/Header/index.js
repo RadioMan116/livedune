@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Button from '../Button';
-import { writeDate } from '../../api/globalFunc';
+import { writeData } from '../../api/globalFunc';
+import { setLoggedOut } from '../../store/authSlice';
 
 import styles from './Header.module.scss';
 
-const Header = ({}) => {
+const Header = () => {
+  const { is_authenticated } = useSelector(state => state.auth);
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const dispatch = useDispatch();
   const [buttonsState, setButtonsState] = useState({
     signup: false,
     visible: true,
@@ -23,32 +27,39 @@ const Header = ({}) => {
     }
   };
 
+  const logOut = () => {
+    dispatch(setLoggedOut());
+  };
+
   useEffect(() => {
     const defPath = pathname === '/';
     const upPath = pathname === '/signup';
     if (upPath) {
-      writeDate(setButtonsState, 'signup', true);
+      writeData(setButtonsState, { signup: true });
     } else if (defPath && signup) {
-      writeDate(setButtonsState, 'signup', false);
+      writeData(setButtonsState, { signup: false });
     }
     if ((upPath || defPath) && !visible) {
-      writeDate(setButtonsState, 'visible', true);
+      writeData(setButtonsState, { visible: true });
     } else if (!(upPath || defPath)) {
-      writeDate(setButtonsState, 'visible', false);
+      writeData(setButtonsState, { visible: false });
     }
   }, [pathname]);
 
   return (
     <header className={`${styles.header} `}>
       <div className={`container ${styles.header__container}`}>
-        <Button className={styles.header__logo}>
+        <Button
+          className={styles.header__logo}
+          onClick={() => navigate('/', { replace: true })}
+        >
           <img
             src={'/logo.svg'}
             alt='logo'
           />
         </Button>
 
-        {visible && (
+        {visible && !is_authenticated && (
           <div className={styles.header__info}>
             <span className={styles.header__question}>
               {signup ? 'Уже есть аккаунт?' : 'У вас нет аккаунта?'}
@@ -59,6 +70,17 @@ const Header = ({}) => {
               onClick={changeSing}
             >
               {signup ? 'Войти' : 'Регистрация'}
+            </Button>
+          </div>
+        )}
+
+        {is_authenticated && (
+          <div className={styles.header__info}>
+            <Button
+              className={styles.header__logOut}
+              onClick={logOut}
+            >
+              Выйти
             </Button>
           </div>
         )}

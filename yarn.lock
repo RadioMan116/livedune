@@ -5473,6 +5473,10 @@ __metadata:
     react-redux: ^8.0.5
     react-router-dom: ^6.6.1
     react-scripts: 5.0.1
+    redux: ^4.2.0
+    redux-persist: ^6.0.0
+    redux-thunk: ^2.4.2
+    validator: 11.0.0
     web-vitals: ^2.1.4
   languageName: unknown
   linkType: soft
@@ -11392,6 +11396,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"redux-persist@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "redux-persist@npm:6.0.0"
+  peerDependencies:
+    redux: ">4.0.0"
+  checksum: edaf10dbf17351ce8058d0802357adae8665b3a1ff39371834e37838ddbe1a79cccbc717b8ba54acb5307651ccf51d0f7dc1cbc8dbae0726ff952d11ef61c6b8
+  languageName: node
+  linkType: hard
+
 "redux-thunk@npm:^2.4.2":
   version: 2.4.2
   resolution: "redux-thunk@npm:2.4.2"
@@ -13227,6 +13240,13 @@ __metadata:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
+  languageName: node
+  linkType: hard
+
+"validator@npm:11.0.0":
+  version: 11.0.0
+  resolution: "validator@npm:11.0.0"
+  checksum: ec96aa3f146c75eb3a8d4ab571d424bc9daf533023239e950e7e12dd23a1cc70ab3b8ca2831335dce9ab24bc4dd474e7d56b45c2eaf9d15debcc4bc757314d25
   languageName: node
   linkType: hard
 

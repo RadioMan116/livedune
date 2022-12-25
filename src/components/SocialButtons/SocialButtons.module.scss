@@ -17,6 +17,11 @@
     padding: 16px;
     border-radius: 12px;
 
+    &:hover {
+      background: #f6f8ff;
+      border-color: #f6f8ff;
+    }
+
     &:before {
       content: '';
       width: 24px;
