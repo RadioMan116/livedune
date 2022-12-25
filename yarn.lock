@@ -5454,33 +5454,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dune@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "dune@workspace:."
-  dependencies:
-    "@reduxjs/toolkit": ^1.9.0
-    "@testing-library/jest-dom": ^5.16.5
-    "@testing-library/react": ^13.4.0
-    "@testing-library/user-event": ^13.5.0
-    eslint: 7.31.0
-    eslint-config-react-app: ^7.0.1
-    eslint-plugin-unused-imports: ^2.0.0
-    node-sass: ^8.0.0
-    prettier: ^2.8.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-helmet: ^6.1.0
-    react-redux: ^8.0.5
-    react-router-dom: ^6.6.1
-    react-scripts: 5.0.1
-    redux: ^4.2.0
-    redux-persist: ^6.0.0
-    redux-thunk: ^2.4.2
-    validator: 11.0.0
-    web-vitals: ^2.1.4
-  languageName: unknown
-  linkType: soft
-
 "duplexer@npm:^0.1.2":
   version: 0.1.2
   resolution: "duplexer@npm:0.1.2"
@@ -8717,6 +8690,33 @@ __metadata:
   checksum: 0c37f9f7fa212b38912b7145e1cd16a5f3cd34d782441c3e6ca653485d326f58b3caccda66efce1c5812bde4961bbde3374fae4b0d11bf1226152337f3894aa5
   languageName: node
   linkType: hard
+
+"livedune@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "livedune@workspace:."
+  dependencies:
+    "@reduxjs/toolkit": ^1.9.0
+    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/react": ^13.4.0
+    "@testing-library/user-event": ^13.5.0
+    eslint: 7.31.0
+    eslint-config-react-app: ^7.0.1
+    eslint-plugin-unused-imports: ^2.0.0
+    node-sass: ^8.0.0
+    prettier: ^2.8.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-helmet: ^6.1.0
+    react-redux: ^8.0.5
+    react-router-dom: ^6.6.1
+    react-scripts: 5.0.1
+    redux: ^4.2.0
+    redux-persist: ^6.0.0
+    redux-thunk: ^2.4.2
+    validator: 11.0.0
+    web-vitals: ^2.1.4
+  languageName: unknown
+  linkType: soft
 
 "loader-runner@npm:^4.2.0":
   version: 4.3.0
