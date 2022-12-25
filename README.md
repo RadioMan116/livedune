@@ -16,4 +16,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - добавил redux-persist
 
-при авторизации и регистраци
+при авторизации и регистрации
+
+
+
+### P.S.
+
+- при регистарации также добавил проверку на пустоту обязательных полей:
+ 1) Имя
+ 2) Email
+ 3) Пароль
+- ну и как по тз валидация поля email

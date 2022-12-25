@@ -39,8 +39,6 @@ const SigninForm = () => {
     let data = { ...json };
     writeData(setMainState, { fetch: true });
 
-    console.log(data);
-
     if (isEmpty(data)) {
       writeData(setMainState, { error: errorTxt[0], fetch: false });
       return false;
