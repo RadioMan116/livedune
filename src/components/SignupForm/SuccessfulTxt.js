@@ -6,11 +6,11 @@ const SuccessfulTxt = ({ navigate, reject }) => {
   };
   return (
     <div className={'form form__success'}>
-      <span className={'form__title'}>Подтвердите ваш e-mail</span>
+      <span className={'form__title'}>Подтвердите ваш&nbsp;e‑mail</span>
       <span className={'form__subtitle'}>
         Игорь, на ваш E-mail отправлено письмо со ссылкой для подтверждения.
         Перейдите по ней, чтобы активировать вашу учетную запись и получить 7
-        дней бесплатного доступа.{' '}
+        дней бесплатного доступа.
       </span>
       <Button
         type={'main'}

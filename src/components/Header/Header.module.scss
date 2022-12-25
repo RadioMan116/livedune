@@ -7,12 +7,21 @@
   left: 0;
   top: 0;
   z-index: 9;
+  background: white;
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+
+  &__logo {
+    max-width: 143px;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__info {
@@ -48,6 +57,24 @@
     color: var(--t-black40);
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
+    height: 60px;
+
+    &__logo {
+      max-width: 114.36px;
+    }
+
+    &__question {
+      display: none;
+    }
+
+    &__btn {
+      width: 113px;
+      height: 40px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 13px;
+      letter-spacing: unset;
+    }
   }
 }

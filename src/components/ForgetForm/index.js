@@ -37,12 +37,10 @@ const ForgetForm = () => {
     restorePass(data)
       .then(res => {
         if (res.status < 400) {
-          console.log(res);
-          writeData(setMainState, { fetch: false, error: 0,step:1 });
+          writeData(setMainState, { fetch: false, error: 0, step: 1 });
         }
       })
       .catch(err => {
-        console.log(err);
         writeData(setMainState, { fetch: false, error: 2 });
       });
   };
@@ -57,7 +55,7 @@ const ForgetForm = () => {
       </div>
       <span className={'form__caption'}>Восстановить пароль</span>
       <span className={'form__subtitle'}>
-        Введите e-mail, на который регистрировались ранее
+        Введите e-mail, на который регистрировались&nbsp;ранее
       </span>
 
       <div className={`form__inner ${mainState.error !== 0 ? 'error' : ''}`}>

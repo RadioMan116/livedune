@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import SocialButtons from '../SocialButtons';
 import Input from '../Input';
@@ -10,6 +11,7 @@ import {
   trimValue,
   writeData,
 } from '../../api/globalFunc';
+import { setLoggedIn } from '../../store/authSlice';
 
 import SuccessfulTxt from './SuccessfulTxt';
 import RejectForm from './RejectForm';
@@ -20,6 +22,7 @@ const errorTxt = [
 ];
 
 const Signup = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [form, setForm] = useState([
@@ -60,6 +63,7 @@ const Signup = () => {
     setTimeout(() => {
       writeData(setMainState, { step: 1, fetch: false });
       writeData(setJson, { name: '', email: '', password: '', promo: '' });
+      dispatch(setLoggedIn());
     }, 800);
   };
 
@@ -79,7 +83,7 @@ const Signup = () => {
       <div className={`form form__signin ${mainState.fetch ? 'send' : ''}`}>
         <span className={'form__title'}>Регистрация</span>
         <span className={'form__subtitle'}>
-          Зарегистрируйся и получи доступ к аналитике аккаунтов.
+          Зарегистрируйся и получи доступ к&nbsp;аналитике&nbsp;аккаунтов.
         </span>
         <SocialButtons className={'form__social'} />
         <span className={'form__either'}>или</span>
