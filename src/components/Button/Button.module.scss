@@ -1,0 +1,30 @@
+.button {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &.main {
+    background: var(--main);
+    color: white;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+      background: #2856f1;
+    }
+  }
+
+  &.link {
+    color: var(--main);
+
+    &:hover {
+      color: #6f8df1;
+    }
+
+    &:active {
+      color: #2856f1;
+    }
+  }
+}
