@@ -39,6 +39,8 @@ const SigninForm = () => {
     let data = { ...json };
     writeData(setMainState, { fetch: true });
 
+    console.log(data);
+
     if (isEmpty(data)) {
       writeData(setMainState, { error: errorTxt[0], fetch: false });
       return false;
@@ -48,7 +50,7 @@ const SigninForm = () => {
       .then(res => {
         if (res.status < 400) {
           writeData(setMainState, { error: '', fetch: false });
-          writeData(setJson, { name: '', password: '' });
+          writeData(setJson, { email: '', password: '' });
           dispatch(setLoggedIn());
         }
       })
