@@ -16,4 +16,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - добавил redux-persist
 
-при Авторизации и Регистраци
+при авторизации и регистраци
