@@ -29,6 +29,7 @@ const Header = () => {
 
   const logOut = () => {
     dispatch(setLoggedOut());
+    if (pathname !== '/') navigate('/', { replace: true });
   };
 
   useEffect(() => {
