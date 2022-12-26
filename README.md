@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deploy
 
-- https://master--idyllic-parfait-bba166.netlify.app/
+- https://idyllic-parfait-bba166.netlify.app/
 
 
 ## Для сохранение сессии при перезагрузке
